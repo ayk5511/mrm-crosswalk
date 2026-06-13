@@ -1,0 +1,4 @@
+pipeline,repo,union_checkable_met,union_score_pct,sr_11_7_us,eu_ai_act,pra_ss1_23_uk,mas_feat_veritas_sg,osfi_e23_ca,nist_iso
+mr-audit,github.com/ayk5511/mr-audit,6,100,100,100,100,100,100,100
+vol-eval,github.com/ayk5511/vol-eval,4,67,80,67,80,100,67,80
+mrm-crosswalk,github.com/ayk5511/mrm-crosswalk,3,50,60,50,60,100,50,60

@@ -1,0 +1,23 @@
+\section{Introduction}\label{sec:intro}
+
+A bank that deploys a single credit-scoring or forecasting model into more than one market is now subject to several distinct model-risk regimes at once. In the United States, model risk management has been governed since 2011 by the joint Federal Reserve / OCC guidance SR 11-7 \citep{FedSR117, OCC2011}. In the European Union, the AI Act \citep{EUAIAct} imposes record-keeping, logging, and retention duties on high-risk AI systems, with the high-risk provisions taking effect on 2 August 2026. The United Kingdom's Prudential Regulation Authority issued its first dedicated model-risk supervisory statement, SS1/23 \citep{PRASS123}, effective 17 May 2024. Singapore's Monetary Authority published the FEAT principles \citep{MASFEAT} and the Veritas assessment methodologies \citep{MASVeritas}. Canada's OSFI finalised Guideline E-23 \citep{OSFIE23} in September 2025, effective 1 May 2027, expanding its scope to all models including machine learning. Two voluntary frameworks --- the NIST AI Risk Management Framework \citep{NIST_AI_100_1} and ISO/IEC 42001 \citep{ISO42001} --- sit alongside the binding regimes.
+
+These regimes overlap heavily in intent but differ in letter. All require some form of documentation, validation, and governance; only the EU AI Act fixes a numerical record-retention floor; only OSFI E-23 makes model \emph{decommissioning} an explicit lifecycle stage; fairness assessment is central to the EU and Singapore regimes but absent from the original SR 11-7. A compliance officer reconciling these texts, and a researcher attempting to measure whether published work would survive any of them, both face the same obstacle: there is no common yardstick. The fragmentation is not academic --- machine learning is now a core methodology in quantitative finance \citep{GuKellyXiu2020}, and the same model is routinely deployed across jurisdictions.
+
+This paper supplies that yardstick and makes two paired contributions. First (\Cref{sec:crosswalk}), we construct a \emph{cross-jurisdiction crosswalk}: a single table mapping twelve audit-trail and model-risk-management requirements onto the specific provision of each of the five binding regimes and the two voluntary frameworks, making explicit where they converge, where they diverge, and where a requirement has no analogue. Second (\Cref{sec:benchmark}), we release an \emph{open compliance benchmark} that scores a machine-learning pipeline against the union of these requirements, with a reproducible scoring harness and a public leaderboard, so that compliance against the combined standard becomes a measurable, comparable quantity rather than a manual reading exercise.
+
+\subsection{Contributions}\label{sec:contributions}
+
+\begin{itemize}[leftmargin=*]
+    \item A twelve-requirement crosswalk of machine-learning model-risk regulation across five binding regimes and two voluntary frameworks (\Cref{tab:crosswalk}), with each cell tied to the citable provision and an honest marking of requirements that are explicit, implicit, partial, or absent in each regime.
+    \item A structured analysis of cross-regime convergence and divergence: which requirements are universal, which are jurisdiction-specific, and which create genuine multi-market compliance conflicts.
+    \item An open, versioned compliance benchmark and scoring harness, released under permissive licences, that scores an ML pipeline against the union standard and against any single regime, with a public leaderboard seeded on public-data pipelines.
+\end{itemize}
+
+\subsection{Scope and honest limitations}\label{sec:scope}
+
+The crosswalk is an \emph{interpretive} mapping of public regulatory text, not legal advice; firms remain responsible for their own compliance determinations with their supervisors. Regulations evolve: SR 11-7 / OCC 2011-12 was rescinded and replaced by revised interagency guidance in 2026, and OSFI E-23 does not take effect until 2027. The crosswalk is therefore versioned to the texts as of the dates recorded in \Cref{sec:crosswalk}, and the released artefact is designed to be updated as the law changes.
+
+\subsection{Roadmap}\label{sec:roadmap}
+
+\Cref{sec:crosswalk} describes the crosswalk methodology, presents the mapping, and analyses convergence and divergence. \Cref{sec:benchmark} describes the open compliance benchmark, its scoring harness, and the seed leaderboard. \Cref{sec:discussion} discusses use, limitations, and future maintenance.

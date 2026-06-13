@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mrm-crosswalk"
+version = "0.1.0"
+description = "A cross-jurisdiction model-risk crosswalk and an open compliance benchmark for machine-learning pipelines in finance."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "Akram Khan", email = "1819ak@gmail.com" }]
+keywords = ["model risk management", "SR 11-7", "EU AI Act", "compliance benchmark", "audit trail", "regulatory technology", "machine learning"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.urls]
+Homepage = "https://github.com/ayk5511/mrm-crosswalk"
+
+[project.scripts]
+mrm-crosswalk = "mrm_crosswalk.score:_cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mrm_crosswalk = ["crosswalk.csv"]

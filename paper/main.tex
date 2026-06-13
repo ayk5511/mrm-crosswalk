@@ -1,0 +1,67 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{cleveref}
+\usepackage{natbib}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{pdflscape}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=green!50!black,
+    urlcolor=blue!70!black
+}
+
+\onehalfspacing
+
+\title{A Cross-Jurisdiction Crosswalk of Machine-Learning Model-Risk Regulation, with an Open Compliance Benchmark for Quantitative Finance}
+
+\author{
+    Akram Khan\thanks{Independent Researcher. ORCID: \href{https://orcid.org/0009-0002-7521-8648}{0009-0002-7521-8648}. Email: \href{mailto:1819ak@gmail.com}{1819ak@gmail.com}. The crosswalk, the scoring harness, and the benchmark leaderboard are released at \href{https://github.com/ayk5511/mrm-crosswalk}{github.com/ayk5511/mrm-crosswalk}.}
+}
+
+\date{April 2026}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Machine-learning model-risk regulation in finance has fragmented across jurisdictions. The U.S.\ SR 11-7 / OCC Bulletin 2011-12, the EU AI Act (Regulation 2024/1689), the U.K.\ Prudential Regulation Authority's SS1/23, Singapore's MAS FEAT principles and Veritas assessment methodologies, and Canada's OSFI Guideline E-23 each impose overlapping but non-identical obligations on model documentation, data provenance, independent validation, per-prediction logging, record retention, monitoring, and governance. A firm deploying one model into several markets must currently reconcile these texts by hand, and a researcher auditing the published literature has no common yardstick. This paper makes two paired contributions. First, we construct a \emph{cross-jurisdiction crosswalk} that maps twelve audit-trail and model-risk-management requirements onto the specific provision of each regime (and onto the voluntary NIST AI RMF and ISO/IEC 42001 frameworks), making explicit where the regimes converge, where they diverge, and where a requirement in one has no analogue in another. Second, we release an \emph{open compliance benchmark} that scores a machine-learning pipeline against the union of these requirements, with a reproducible scoring harness and a public leaderboard. Both artefacts are released under permissive licences and versioned against the regulations' effective dates, so that practitioners, auditors, and future researchers can extend them as the law evolves.
+
+\medskip
+\noindent\textbf{Keywords:} model risk management, SR 11-7, EU AI Act, PRA SS1/23, OSFI E-23, MAS Veritas, compliance benchmark, audit trail, regulatory technology, machine learning
+
+\medskip
+\noindent\textbf{JEL Classification:} C88, G18, G28, K23
+\end{abstract}
+
+\newpage
+\tableofcontents
+\newpage
+
+\input{sections/01_introduction}
+\input{sections/02_crosswalk}
+\input{sections/03_benchmark}
+\input{sections/04_discussion}
+
+\bibliographystyle{apalike}
+\bibliography{bib/references}
+
+\end{document}

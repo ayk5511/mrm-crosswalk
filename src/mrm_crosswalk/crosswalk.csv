@@ -1,0 +1,13 @@
+requirement,sr_11_7_us,eu_ai_act,pra_ss1_23_uk,mas_feat_veritas_sg,osfi_e23_ca,nist_iso
+Model inventory / identification,Sec. III,"Art. 11; Annex IV; Art. 49 registration",Principle 1,--,Explicit enterprise inventory w/ metadata,MAP-1 / Annex A
+Replicable documentation,Sec. IV-V,"Art. 11; Annex IV",Principle 3,Veritas Doc 3C,Lifecycle documentation,MEASURE / 7.5
+Data provenance / lineage,Sec. IV (data quality),Art. 10,Principle 3,Veritas Doc 3A (data),Model-design data component,MAP-3 / 7.4; cf. BCBS 239
+Versioning / change control,Sec. V,"Art. 12; re-conformity",Principles 2-3,--,Lifecycle (deploy/monitor),MANAGE / 8
+Independent validation,Sec. V (core),"Art. 17; Art. 43",Principle 4 (explicit),Accountability,Independent model review,MEASURE-2 / 9
+Per-prediction / event logging,Sec. V (outcomes; partial),Art. 12 (items in Art. 12(3) biometric),--,partial,Monitoring (partial),--
+Record retention (duration),--,Art. 19 (>= 6 months),--,--,Through lifecycle + post-decommission,--
+Ongoing monitoring / drift,Sec. V,"Art. 72 (post-market); Art. 9",Principles 3 and 5,Accountability,Model monitoring,MANAGE-4 / 9.1
+Governance / accountability,Sec. VI,"Art. 26; Art. 22",Principle 2,Accountability (FEAT),"Governance, scaled to risk",GOVERN / 5
+Transparency / explainability,Sec. IV,Art. 13; Art. 86 (individual),Principle 3,Transparency (FEAT; Doc 3C),Explainability considerations,MAP-2 / 6
+Fairness / bias assessment,--,"Art. 10(2); Art. 15",--,Fairness (FEAT; Doc 3A),partial,MEASURE-2.11 / --
+Decommissioning / lifecycle end,implicit,implicit,Principle 3,--,Explicit decommission stage,MANAGE / 8
