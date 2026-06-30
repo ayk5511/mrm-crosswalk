@@ -60,8 +60,8 @@ def main() -> int:
     tex += (REPO_ROOT / "paper" / "main.tex").read_text()
     audit.check_equal(actual="twelve" in tex.lower(), expected=True,
                       label="paper states 'twelve' requirements")
-    audit.check_equal(actual="five binding regimes" in tex, expected=True,
-                      label="paper states 'five binding regimes'")
+    audit.check_equal(actual="five regulatory regimes" in tex, expected=True,
+                      label="paper states 'five regulatory regimes'")
 
     return audit.finish()
 
