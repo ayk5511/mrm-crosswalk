@@ -4,9 +4,9 @@
 
 We fix twelve requirements that recur across model-risk and AI-governance regimes and that together define an auditable model lifecycle: (1) model inventory and identification; (2) documentation sufficient for independent replication; (3) data provenance and lineage; (4) versioning and change control; (5) independent validation; (6) per-prediction or event-level logging; (7) record retention with a defined duration; (8) ongoing monitoring and drift detection; (9) governance and named accountability; (10) transparency and explainability; (11) fairness and bias assessment; and (12) decommissioning as an explicit lifecycle stage. These twelve extend the audit-trail rubric of \citet{KhanMrAudit2026} from a single-regime (SR 11-7 / EU AI Act) scope to the multi-regime setting. Several of them also have an established methodological literature: structured model documentation via Model Cards \citep{MitchellModelCards2019}, the reproducibility-in-AI scholarship of \citet{GundersenKjensmo2018}, and risk-data-aggregation standards such as BCBS~239 \citep{BCBS239} for data lineage.
 
-For each requirement we read the public text of five binding or semi-binding regimes --- SR 11-7 / OCC 2011-12 \citep{FedSR117, OCC2011}, the EU AI Act \citep{EUAIAct}, PRA SS1/23 \citep{PRASS123}, the MAS FEAT principles and Veritas methodologies \citep{MASFEAT, MASVeritas}, and OSFI Guideline E-23 \citep{OSFIE23} --- and two voluntary frameworks (NIST AI RMF \citep{NIST_AI_100_1} and ISO/IEC 42001 \citep{ISO42001}), and record the most on-point provision. \Cref{tab:crosswalk} is the result. Cells cite the governing section, article, or principle; \textit{partial} marks a provision that addresses the requirement only in part; \textit{impl.} marks a requirement that is implied by the regime's lifecycle language without a dedicated clause; and ``---'' marks the absence of an explicit analogue (which is not the same as prohibition).
+For each requirement we read the public text of five binding or semi-binding regimes (SR 11-7 / OCC 2011-12 \citep{FedSR117, OCC2011}, the EU AI Act \citep{EUAIAct}, PRA SS1/23 \citep{PRASS123}, the MAS FEAT principles and Veritas methodologies \citep{MASFEAT, MASVeritas}, and OSFI Guideline E-23 \citep{OSFIE23}) plus two voluntary frameworks (NIST AI RMF \citep{NIST_AI_100_1} and ISO/IEC 42001 \citep{ISO42001}), and record the most on-point provision. \Cref{tab:crosswalk} is the result. Cells cite the governing section, article, or principle; \textit{partial} marks a provision that addresses the requirement only in part; \textit{impl.} marks a requirement that is implied by the regime's lifecycle language without a dedicated clause; and ``n/a'' marks the absence of an explicit analogue (which is not the same as prohibition).
 
-Two honesty caveats govern the table. It is an \emph{interpretive} reading of public text, not legal advice. And it is \emph{versioned}: SR 11-7 / OCC 2011-12 reflects the 2011 guidance as historically in force (rescinded and replaced by revised interagency guidance in 2026); the EU AI Act reflects Regulation 2024/1689 with high-risk duties effective 2 August 2026; PRA SS1/23 is effective 17 May 2024; OSFI E-23 is the September 2025 final text effective 1 May 2027.
+Two caveats govern the table. The mapping is one reading of the public text, and it is \emph{versioned}: SR 11-7 / OCC 2011-12 reflects the 2011 guidance as historically in force (superseded by revised interagency guidance in 2026); the EU AI Act reflects Regulation 2024/1689 with high-risk duties effective 2 August 2026; PRA SS1/23 is effective 17 May 2024; OSFI E-23 is the September 2025 final text effective 1 May 2027.
 
 \begin{landscape}
 \begin{table}[p]
@@ -14,23 +14,23 @@ Two honesty caveats govern the table. It is an \emph{interpretive} reading of pu
 \scriptsize
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.25}
-\caption{Cross-jurisdiction crosswalk of twelve model-risk / audit-trail requirements. Cells cite the governing provision; \textit{partial} = partially addressed, \textit{impl.} = implied by lifecycle language, ``---'' = no explicit analogue. NIST/ISO column gives the relevant NIST AI RMF function / ISO/IEC 42001 clause.}\label{tab:crosswalk}
+\caption{Cross-jurisdiction crosswalk of twelve model-risk / audit-trail requirements. Cells cite the governing provision; \textit{partial} = partially addressed, \textit{impl.} = implied by lifecycle language, ``n/a'' = no explicit analogue. NIST/ISO column gives the relevant NIST AI RMF function / ISO/IEC 42001 clause.}\label{tab:crosswalk}
 \begin{tabular}{@{}p{3.0cm}p{2.6cm}p{3.0cm}p{2.4cm}p{2.6cm}p{2.4cm}p{2.6cm}@{}}
 \toprule
 \textbf{Requirement} & \textbf{SR 11-7 (US)} & \textbf{EU AI Act} & \textbf{PRA SS1/23 (UK)} & \textbf{MAS FEAT / Veritas (SG)} & \textbf{OSFI E-23 (CA)} & \textbf{NIST / ISO} \\
 \midrule
-1. Model inventory / identification & \S III & Art.~11, Annex~IV; registration Art.~49 & Principle 1 & --- & Explicit enterprise inventory w/ metadata & MAP-1 / Annex~A \\
-2. Replicable documentation & \S IV--V & Art.~11, Annex~IV & Principle 3 & Veritas Doc 3C & Lifecycle documentation & MEASURE / \S 7.5 \\
+1. Model inventory / identification & \S III & Art.~11, Annex~IV; registration Art.~49 & Principle 1 & n/a & Explicit enterprise inventory w/ metadata & MAP-1 / Annex~A \\
+2. Replicable documentation & \S IV-V & Art.~11, Annex~IV & Principle 3 & Veritas Doc 3C & Lifecycle documentation & MEASURE / \S 7.5 \\
 3. Data provenance / lineage & \S IV (data quality) & Art.~10 & Principle 3 & Veritas Doc 3A (data) & Model-design data component & MAP-3 / \S 7.4; cf.\ BCBS~239 \\
-4. Versioning / change control & \S V & Art.~12; re-conformity & Principles 2--3 & --- & Lifecycle (deploy / monitor) & MANAGE / \S 8 \\
+4. Versioning / change control & \S V & Art.~12; re-conformity & Principles 2-3 & n/a & Lifecycle (deploy / monitor) & MANAGE / \S 8 \\
 5. Independent validation & \S V (core) & Art.~17, Art.~43 & Principle 4 (explicit) & Accountability & Independent model review & MEASURE-2 / \S 9 \\
-6. Per-prediction / event logging & \S V (outcomes; partial) & Art.~12; items in Art.~12(3) (biometric) & --- & \textit{partial} & Monitoring (\textit{partial}) & --- \\
-7. Record retention (duration) & --- & \textbf{Art.~19 ($\geq$6 months)} & --- & --- & Through lifecycle + post-decommission & --- \\
+6. Per-prediction / event logging & \S V (outcomes; partial) & Art.~12; items in Art.~12(3) (biometric) & n/a & \textit{partial} & Monitoring (\textit{partial}) & n/a \\
+7. Record retention (duration) & n/a & \textbf{Art.~19 ($\geq$6 months)} & n/a & n/a & Through lifecycle + post-decommission & n/a \\
 8. Ongoing monitoring / drift & \S V & Art.~72 (post-market), Art.~9 & Principles 3, 5 & Accountability & Model monitoring & MANAGE-4 / \S 9.1 \\
 9. Governance / accountability & \S VI & Art.~26, Art.~22 & Principle 2 & Accountability (FEAT) & Governance, scaled to risk & GOVERN / \S 5 \\
 10. Transparency / explainability & \S IV & Art.~13; Art.~86 (individual) & Principle 3 & Transparency (FEAT; Doc 3C) & Explainability considerations & MAP-2 / \S 6 \\
-11. Fairness / bias assessment & --- & Art.~10(2), Art.~15 & --- & \textbf{Fairness (FEAT; Doc 3A)} & \textit{partial} & MEASURE-2.11 / --- \\
-12. Decommissioning / lifecycle end & \textit{impl.} & \textit{impl.} & Principle 3 & --- & \textbf{Explicit decommission stage} & MANAGE / \S 8 \\
+11. Fairness / bias assessment & n/a & Art.~10(2), Art.~15 & n/a & \textbf{Fairness (FEAT; Doc 3A)} & \textit{partial} & MEASURE-2.11 / n/a \\
+12. Decommissioning / lifecycle end & \textit{impl.} & \textit{impl.} & Principle 3 & n/a & \textbf{Explicit decommission stage} & MANAGE / \S 8 \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -38,7 +38,7 @@ Two honesty caveats govern the table. It is an \emph{interpretive} reading of pu
 
 \subsection{Where the regimes converge}\label{sec:converge}
 
-Five requirements are effectively universal. \emph{Independent validation} (row 5), \emph{documentation sufficient for an independent party to understand and reproduce the model} (row 2), \emph{governance with named accountability} (row 9), \emph{ongoing monitoring} (row 8), and a \emph{model inventory} (row 1) appear, in some form, in every binding regime except where a regime is principles-only. SR 11-7's three pillars (development, validation, governance), PRA SS1/23's five principles, and OSFI E-23's lifecycle all reduce to the same backbone. A firm that satisfies this backbone has satisfied the common core of every regime studied.
+Five requirements are effectively universal. \emph{Independent validation} (row 5), \emph{documentation sufficient for an independent party to understand and reproduce the model} (row 2), \emph{governance with named accountability} (row 9), \emph{ongoing monitoring} (row 8), and a \emph{model inventory} (row 1) appear, in some form, in every binding regime except where a regime is principles-only. SR 11-7's three pillars (development, validation, governance), PRA SS1/23's five principles, and OSFI E-23's lifecycle all reduce to the same backbone.
 
 \subsection{Where the regimes diverge}\label{sec:diverge}
 

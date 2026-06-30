@@ -2,15 +2,15 @@
 
 \subsection{How to use the crosswalk}\label{sec:use}
 
-For a practitioner, \Cref{tab:crosswalk} is read column-up: identify the jurisdictions a model will touch, take the union of their non-empty cells, and that union is the requirement set to engineer against. The divergent rows (7, 11, 12) are the ones a single-regime team is most likely to miss. For a researcher, the crosswalk is a common rubric: a corpus of published pipelines can be scored against the union and against each regime, making ``would this work survive an audit?'' a measurable, comparable question rather than a rhetorical one.
+For a practitioner, \Cref{tab:crosswalk} is read column-up: identify the jurisdictions a model will touch, take the union of their non-empty cells, and that union is the requirement set to engineer against. The divergent rows (7, 11, 12) are the ones a single-regime team is most likely to miss. For a researcher, the crosswalk is a common rubric: a corpus of published pipelines can be scored against the union and against each regime, making ``would this work survive an audit?'' something you can score and rank, not just argue about.
 
 \subsection{Limitations}\label{sec:limitations}
 
-Three limitations bound the contribution honestly.
+Three limitations bound the contribution.
 
 \begin{itemize}[leftmargin=*]
-    \item \textbf{It is an interpretation, not legal advice.} Each cell records the most on-point public provision in our reading; a supervisor or counsel may map a requirement differently, and a ``---'' marks the absence of an \emph{explicit} analogue, not a determination that the regime permits the omission. Firms remain responsible for their own compliance conclusions.
-    \item \textbf{Regulations move.} SR 11-7 / OCC 2011-12 was rescinded and replaced by revised interagency guidance in 2026; the EU AI Act's high-risk duties take effect 2 August 2026; OSFI E-23 takes effect 1 May 2027. The crosswalk is versioned to the texts as dated in \Cref{sec:crosswalk}, and the released artefact is built to be updated. A crosswalk that is not maintained is wrong within a year; maintenance is part of the contribution, not an afterthought.
+    \item \textbf{It is an interpretation, not legal advice.} Each cell records the most on-point public provision in our reading; a supervisor or counsel may map a requirement differently, and an ``n/a'' marks the absence of an \emph{explicit} analogue, not a determination that the regime permits the omission. Firms remain responsible for their own compliance conclusions.
+    \item \textbf{Regulations move.} SR 11-7 / OCC 2011-12 gave way to revised interagency guidance in 2026; the EU AI Act's high-risk duties take effect 2 August 2026; OSFI E-23 on 1 May 2027. The crosswalk is versioned to the texts as dated in \Cref{sec:crosswalk}, and the released artefact is built to be updated. A crosswalk that is not maintained is wrong within a year; maintenance is part of the contribution, not an afterthought.
     \item \textbf{The benchmark seed is small.} The v0.1 harness automates six of twelve requirements and the seed leaderboard is deliberately limited. The value at v0.1 is the rubric and the reproducible scoring method, not a comprehensive ranking; breadth is the community-extension path.
 \end{itemize}
 
@@ -20,4 +20,4 @@ Three extensions are planned and are structured into the released artefact: addi
 
 \subsection{Conclusion}\label{sec:conclusion}
 
-Machine-learning model-risk regulation in finance is converging on a common backbone --- inventory, replicable documentation, independent validation, monitoring, and named governance --- while diverging on retention, fairness, and decommissioning. We have made that structure explicit in a single crosswalk of twelve requirements across five binding regimes and two voluntary frameworks, and turned it into an open, versioned benchmark that scores a pipeline against the union of five jurisdictions at once. The crosswalk is the durable contribution; the benchmark is the instrument that keeps it useful as the law evolves.
+Machine-learning model-risk regulation in finance is converging on a common backbone (inventory, replicable documentation, independent validation, monitoring, and named governance) while diverging on retention, fairness, and decommissioning. We have made that structure explicit in a single crosswalk of twelve requirements across five binding regimes and two voluntary frameworks, and turned it into an open, versioned benchmark that scores a pipeline against the union of five jurisdictions at once. The crosswalk is the durable contribution; the benchmark is the instrument that keeps it useful as the law evolves.
