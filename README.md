@@ -33,13 +33,13 @@ print(s.union_score)        # fraction of the six checkable requirements met
 
 ## Seed leaderboard
 
-`results/leaderboard.csv` is seeded with real harness output on public ML-finance pipelines (the author's own open-source repositories, as reproducible worked examples):
+`results/leaderboard.csv` is seeded with real harness output on the author's own open-source ML-finance repositories as reproducible worked examples, scored as of June 2026 (scores evolve as repositories mature):
 
 | Pipeline | Union (checkable) |
 |---|---|
 | `mr-audit` | 6/6 (100%) |
 | `vol-eval` | 4/6 (67%) |
-| `mrm-crosswalk` | 3/6 (50%) |
+| `mrm-crosswalk` | 6/6 (100%) |
 
 This is a **v0.1 seed**, intended to be extended — by adding regimes as columns, pipelines as rows, and updated provisions as the law changes — not as a finished ranking.
 
